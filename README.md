@@ -1,15 +1,26 @@
-# CPIT-405 Labs
+# CPIT-405 Lab Notebook
 
-Course repository for Hassan Asiri's CPIT-405 Internet Applications lab work.
+Course repository for Hassan Asiri's CPIT-405 Internet Applications practical work.
 
-## Structure
+## Repository layout
 
-| Folder | Contents |
+| Location | Purpose |
 | --- | --- |
-| `Lab1/` | Development-environment setup, personal HTML page, and Lab 1 notes. |
+| `index.html` | Course homepage and index of every lab. |
+| `Lab1/` | Lab 1 source files and standalone submission page. |
+| `Lab2/`, `Lab3/`, ... | Future labs, each kept in its own folder. |
 
-Each new lab belongs in its own folder, for example `Lab2/`, and is linked from the course homepage.
+The two HTML entry points are intentional, not duplicates:
+
+- The root `index.html` is the course homepage published by GitHub Pages.
+- `Lab1/index.html` is the individual webpage required by Lab 1.
+
+## Lab status
+
+| Lab | Topic | Status | Tools used |
+| --- | --- | --- | --- |
+| Lab 1 | Development environment and web basics | Complete | HTML, GitHub, ngrok, Postman |
 
 ## GitHub Pages
 
-The repository root contains the course homepage. Individual labs are published at their folder paths, such as `Lab1/`.
+The root page acts as the public course index. Individual labs are available through their folder paths, for example `Lab1/`.
