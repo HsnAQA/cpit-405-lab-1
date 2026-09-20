@@ -7,7 +7,7 @@
     <style>
       :root {
         color-scheme: light;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Inter, Arial, Helvetica, sans-serif;
       }
 
       * {
@@ -26,64 +26,49 @@
         place-items: center;
         overflow-x: hidden;
         overflow-y: auto;
-        background:
-          radial-gradient(circle at 14% 18%, #f6cb54 0 2.2rem, transparent 2.3rem),
-          radial-gradient(circle at 86% 80%, #ff8e7d 0 4.5rem, transparent 4.6rem),
-          #edf3ff;
-        color: #18233d;
+        background: #f5f7f9;
+        color: #17233a;
       }
 
       main {
         position: relative;
-        width: min(100%, 680px);
+        width: min(100%, 760px);
         padding: clamp(1.5rem, 7vw, 3.25rem);
-        border: 1px solid rgb(24 35 61 / 8%);
-        border-radius: clamp(1.25rem, 5vw, 2rem);
-        background: rgb(255 255 255 / 92%);
-        box-shadow: 0 24px 60px rgb(30 60 120 / 18%);
+        border: 1px solid #d8e0e8;
+        border-top: 5px solid #1f5f86;
+        border-radius: 0.75rem;
+        background: #ffffff;
+        box-shadow: 0 12px 28px rgb(25 45 70 / 8%);
         text-align: left;
       }
 
       .label {
         display: inline-block;
         margin: 0 0 1.25rem;
-        padding: 0.45rem 0.85rem;
-        border-radius: 999px;
-        background: #18233d;
-        color: #ffffff;
-        font-size: 0.78rem;
+        color: #1f5f86;
+        font-size: 0.82rem;
         font-weight: 700;
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
 
       .identity {
-        display: flex;
-        align-items: center;
-        gap: 1.25rem;
-      }
-
-      .lab-mark {
-        width: 0.3rem;
-        height: 4.8rem;
-        flex: 0 0 auto;
-        border-radius: 99px;
-        background: #f6cb54;
-        box-shadow: 0 0 0 0.45rem #fff7d9;
+        border-left: 4px solid #f0c94f;
+        padding-left: clamp(1rem, 3vw, 1.5rem);
       }
 
       h1 {
         margin: 0;
-        color: #18233d;
+        color: #17233a;
         font-size: clamp(2.15rem, 9vw, 3.5rem);
-        letter-spacing: -0.06em;
-        line-height: 0.98;
+        letter-spacing: -0.04em;
+        line-height: 1.02;
         overflow-wrap: anywhere;
       }
 
       p {
         margin: 0.35rem 0 0;
-        color: #5b6a86;
+        color: #52637a;
         font-size: clamp(1rem, 3.8vw, 1.05rem);
         line-height: 1.55;
         overflow-wrap: anywhere;
@@ -94,22 +79,23 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        margin-top: 2.5rem;
+        margin-top: clamp(2rem, 5vw, 3.25rem);
         padding-top: 1.25rem;
-        border-top: 1px solid #dde5f3;
-        color: #52617d;
+        border-top: 1px solid #d8e0e8;
+        color: #52637a;
         font-size: 0.9rem;
       }
 
-      .footer strong {
-        color: #2f70dc;
+      .footer a {
+        color: #1f5f86;
+        font-weight: 700;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2em;
       }
 
       @media (max-width: 500px) {
         .identity {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 0.85rem;
+          padding-left: 1rem;
         }
 
         .footer {
@@ -128,9 +114,6 @@
           letter-spacing: 0.08em;
         }
 
-        .lab-mark {
-          height: 3.75rem;
-        }
       }
 
       @media (max-height: 560px) and (min-width: 501px) {
@@ -150,15 +133,14 @@
     <main>
       <p class="label">CPIT-405 · Lab 01</p>
       <section class="identity" aria-label="Student profile">
-        <span class="lab-mark" aria-hidden="true"></span>
         <div>
           <h1>Hassan Asiri</h1>
-          <p>Internet Applications, building one page at a time.</p>
+          <p>Internet Applications</p>
         </div>
       </section>
       <div class="footer">
-        <span>Development environment: <strong>ready</strong></span>
-        <span>2026</span>
+        <span>Development environment setup</span>
+        <a href="../">Course homepage</a>
       </div>
     </main>
   </body>

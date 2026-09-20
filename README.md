@@ -1,6 +1,6 @@
 # CPIT-405 Lab Notebook
 
-Course repository for Hassan Asiri's CPIT-405 Internet Applications practical work.
+Course repository for CPIT-405 Internet Applications practical work.
 
 ## Repository layout
 
