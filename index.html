@@ -193,35 +193,6 @@
       .open-lab:hover, .open-lab:focus-visible { background: var(--accent); border-color: var(--accent); }
       .open-lab:focus-visible, .lab-row a:focus-visible { outline: 3px solid #d08d1a; outline-offset: 3px; }
 
-      .lab-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 0.55rem;
-        align-items: stretch;
-      }
-
-      .source-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 44px;
-        padding: 0.65rem 0.9rem;
-        border: 1px solid var(--line);
-        background: transparent;
-        color: var(--ink);
-        font-size: 0.88rem;
-        font-weight: 720;
-        text-align: center;
-        text-decoration: none;
-        transition: border-color 180ms ease, background 180ms ease;
-      }
-
-      .source-link:hover, .source-link:focus-visible {
-        border-color: var(--accent);
-        background: var(--accent-soft);
-      }
-
-      .source-link:focus-visible { outline: 3px solid #d08d1a; outline-offset: 3px; }
       .open-lab[aria-disabled="true"] { border-color: var(--line); background: transparent; color: var(--muted); cursor: default; }
 
       .detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
@@ -266,7 +237,7 @@
         main { padding-block: 2.75rem 3.5rem; }
         h1 { font-size: clamp(2.8rem, 16vw, 4rem); letter-spacing: -0.06em; }
         .profile, .detail { padding: 1.15rem; }
-        .lab-actions, .open-lab, .source-link { width: 100%; }
+        .open-lab { width: 100%; }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -321,10 +292,7 @@
               <span class="status">Completed</span>
               <span>HTML, GitHub, ngrok, Postman</span>
             </div>
-            <div class="lab-actions">
-              <a class="open-lab" href="Lab1/">Open task page</a>
-              <a class="source-link" href="https://github.com/HsnAQA/cpit-405-lab-1/tree/main/Lab1">View repository files</a>
-            </div>
+            <a class="open-lab" href="https://github.com/HsnAQA/cpit-405-lab-1">Open repository</a>
           </article>
 
           <article class="lab-row">
