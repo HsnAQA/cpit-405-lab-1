@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPIT-405 Lab 1</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 14% 18%, #f6cb54 0 2.2rem, transparent 2.3rem),
+          radial-gradient(circle at 86% 80%, #ff8e7d 0 4.5rem, transparent 4.6rem),
+          #edf3ff;
+        color: #18233d;
+      }
+
+      main {
+        position: relative;
+        width: min(88%, 680px);
+        padding: 3.25rem;
+        border: 1px solid rgb(24 35 61 / 8%);
+        border-radius: 2rem;
+        background: rgb(255 255 255 / 92%);
+        box-shadow: 0 24px 60px rgb(30 60 120 / 18%);
+        text-align: left;
+      }
+
+      .label {
+        display: inline-block;
+        margin: 0 0 1.25rem;
+        padding: 0.45rem 0.85rem;
+        border-radius: 999px;
+        background: #18233d;
+        color: #ffffff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .identity {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+
+      .monogram {
+        display: grid;
+        width: 4.8rem;
+        height: 4.8rem;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 1.4rem 1.4rem 1.4rem 0.35rem;
+        background: linear-gradient(135deg, #2f70dc, #6d4ee8);
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+      }
+
+      h1 {
+        margin: 0;
+        color: #18233d;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        letter-spacing: -0.06em;
+      }
+
+      p {
+        margin: 0.35rem 0 0;
+        color: #5b6a86;
+        font-size: 1.05rem;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 2.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #dde5f3;
+        color: #52617d;
+        font-size: 0.9rem;
+      }
+
+      .footer strong {
+        color: #2f70dc;
+      }
+
+      @media (max-width: 500px) {
+        main {
+          padding: 2.25rem;
+        }
+
+        .identity {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.85rem;
+        }
+
+        .footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="label">CPIT-405 · Lab 01</p>
+      <section class="identity" aria-label="Student profile">
+        <div class="monogram" aria-hidden="true">HA</div>
+        <div>
+          <h1>Hassan Asiri</h1>
+          <p>Internet Applications, building one page at a time.</p>
+        </div>
+      </section>
+      <div class="footer">
+        <span>Development environment: <strong>ready</strong></span>
+        <span>2026</span>
+      </div>
+    </main>
+  </body>
+</html>

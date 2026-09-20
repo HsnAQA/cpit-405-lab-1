@@ -1,11 +1,15 @@
-# CPIT-405 Lab 1
+# CPIT-405 Labs
 
-## Submission checklist
+Course repository for Hassan Asiri's CPIT-405 Internet Applications lab work.
 
-- [ ] Screenshot: `index.html` opened with VS Code Live Server.
-- [ ] Screenshot: published GitHub Pages URL.
-- [ ] Screenshot: ngrok URL opened on a phone.
-- [ ] Screenshot: GET request to `http://httpbin.org/get` in Postman.
-- [ ] Screenshot: POST request to `http://httpbin.org/post` in Postman.
+## Structure
 
-Before taking the screenshots, replace `Your Name` in `index.html` with your real name.
+| Folder | Contents |
+| --- | --- |
+| `Lab1/` | Development-environment setup, personal HTML page, and Lab 1 notes. |
+
+Each new lab belongs in its own folder, for example `Lab2/`, and is linked from the course homepage.
+
+## GitHub Pages
+
+The repository root contains the course homepage. Individual labs are published at their folder paths, such as `Lab1/`.
