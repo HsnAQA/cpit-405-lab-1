@@ -147,6 +147,15 @@
       .lab-summary, .lab-meta { margin-bottom: 0; color: var(--muted); font-size: 0.93rem; }
       .lab-meta { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 
+      .inline-link {
+        color: var(--accent);
+        font-weight: 720;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.16em;
+      }
+
+      .inline-link:focus-visible { outline: 3px solid #d08d1a; outline-offset: 2px; }
+
       .status {
         display: inline-flex;
         align-items: center;
@@ -303,7 +312,10 @@
             <p class="lab-index">LAB 01</p>
             <div>
               <h3>Development environment and web basics</h3>
-              <p class="lab-summary">Local HTML setup, GitHub repository publishing, ngrok sharing, and HTTP request testing.</p>
+              <p class="lab-summary">
+                Local HTML setup, GitHub repository publishing, ngrok sharing, and HTTP request testing.
+                <a class="inline-link" href="https://divorcee-upwind-splurge.ngrok-free.dev">Open temporary live preview</a>.
+              </p>
             </div>
             <div class="lab-meta" aria-label="Lab 1 completion details">
               <span class="status">Completed</span>
