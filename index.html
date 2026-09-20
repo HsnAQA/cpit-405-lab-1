@@ -20,9 +20,10 @@
       }
 
       * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body { min-width: 320px; margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      body { min-width: 0; margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
       a { color: inherit; }
+      p, h1, h2, h3, dd, .open-lab { overflow-wrap: anywhere; }
 
       .skip-link {
         position: fixed;
@@ -39,7 +40,7 @@
       .skip-link:focus { transform: translateY(0); }
 
       .site-header, main, footer {
-        width: min(1120px, calc(100% - 2.5rem));
+        width: min(1120px, calc(100% - clamp(2rem, 6vw, 4rem)));
         margin-inline: auto;
       }
 
@@ -175,6 +176,8 @@
         font-size: 0.88rem;
         font-weight: 720;
         text-decoration: none;
+        cursor: pointer;
+        touch-action: manipulation;
         transition: background 180ms ease, color 180ms ease;
       }
 
@@ -190,11 +193,40 @@
 
       footer { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem; }
 
+      @media (max-width: 960px) {
+        .lab-row {
+          grid-template-columns: 90px minmax(0, 1fr) auto;
+        }
+
+        .lab-meta {
+          grid-column: 2 / 3;
+        }
+
+        .detail-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .detail:last-child {
+          grid-column: 1 / -1;
+          min-height: auto;
+        }
+      }
+
       @media (max-width: 760px) {
         .site-header, footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 0.25rem; }
         .hero, .detail-grid { grid-template-columns: 1fr; }
         .lab-row { grid-template-columns: 1fr; gap: 0.7rem; }
+        .lab-meta, .detail:last-child { grid-column: auto; }
         .section-heading { align-items: flex-start; flex-direction: column; }
+      }
+
+      @media (max-width: 480px) {
+        .site-header { min-height: 4.25rem; }
+        .course-code, .term { font-size: 0.72rem; }
+        main { padding-block: 2.75rem 3.5rem; }
+        h1 { font-size: clamp(2.8rem, 16vw, 4rem); letter-spacing: -0.06em; }
+        .profile, .detail { padding: 1.15rem; }
+        .open-lab { width: 100%; }
       }
 
       @media (prefers-reduced-motion: reduce) {

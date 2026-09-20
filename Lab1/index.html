@@ -10,12 +10,22 @@
         font-family: Arial, Helvetica, sans-serif;
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
       body {
         display: grid;
-        min-height: 100vh;
+        min-height: 100dvh;
         margin: 0;
+        padding: clamp(1rem, 4vw, 3rem);
         place-items: center;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
         background:
           radial-gradient(circle at 14% 18%, #f6cb54 0 2.2rem, transparent 2.3rem),
           radial-gradient(circle at 86% 80%, #ff8e7d 0 4.5rem, transparent 4.6rem),
@@ -25,10 +35,10 @@
 
       main {
         position: relative;
-        width: min(88%, 680px);
-        padding: 3.25rem;
+        width: min(100%, 680px);
+        padding: clamp(1.5rem, 7vw, 3.25rem);
         border: 1px solid rgb(24 35 61 / 8%);
-        border-radius: 2rem;
+        border-radius: clamp(1.25rem, 5vw, 2rem);
         background: rgb(255 255 255 / 92%);
         box-shadow: 0 24px 60px rgb(30 60 120 / 18%);
         text-align: left;
@@ -65,14 +75,18 @@
       h1 {
         margin: 0;
         color: #18233d;
-        font-size: clamp(2rem, 7vw, 3.5rem);
+        font-size: clamp(2.15rem, 9vw, 3.5rem);
         letter-spacing: -0.06em;
+        line-height: 0.98;
+        overflow-wrap: anywhere;
       }
 
       p {
         margin: 0.35rem 0 0;
         color: #5b6a86;
-        font-size: 1.05rem;
+        font-size: clamp(1rem, 3.8vw, 1.05rem);
+        line-height: 1.55;
+        overflow-wrap: anywhere;
       }
 
       .footer {
@@ -92,10 +106,6 @@
       }
 
       @media (max-width: 500px) {
-        main {
-          padding: 2.25rem;
-        }
-
         .identity {
           align-items: flex-start;
           flex-direction: column;
@@ -105,6 +115,33 @@
         .footer {
           align-items: flex-start;
           flex-direction: column;
+        }
+      }
+
+      @media (max-width: 360px) {
+        body {
+          padding: 0.75rem;
+        }
+
+        .label {
+          font-size: 0.7rem;
+          letter-spacing: 0.08em;
+        }
+
+        .lab-mark {
+          height: 3.75rem;
+        }
+      }
+
+      @media (max-height: 560px) and (min-width: 501px) {
+        body {
+          place-items: start center;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto;
         }
       }
     </style>
