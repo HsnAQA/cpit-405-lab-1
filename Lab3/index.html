@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPIT-405 lab 3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Lab 3: CSS Structure and Properties</h1>
+
+    <!-- Task 1 -->
+    <h2>Task 1: Style the image with a descendant selector</h2>
+    <p>The rule <code>.image-preview img</code> selects the <code>img</code> inside the div with the class <code>image-preview</code>.</p>
+
+    <div class="image-preview">
+      <img src='https://cpit405.gitlab.io/images/KAU_logo.png' alt="King Abdulaziz University logo">
+    </div>
+
+    <pre><code>.image-preview img {
+  border-style: solid;
+  border-width: 30px;
+  border-top-color: skyblue;
+  border-right-color: lightpink;
+  border-bottom-color: lightgreen;
+  border-left-color: #ffefd5;
+}</code></pre>
+
+    <!-- Task 2 -->
+    <h2>Task 2: Which color does each span get?</h2>
+
+    <p>The given code (try it here: move the mouse over the words):</p>
+
+    <div class="demo">
+      <div id="header">
+        <span class="myclass1">Every</span>
+        <span class="myclass2">one can</span>
+        <span class="myclass3">success.</span>
+      </div>
+      <p> One machine can do the work of fifty ordinary men.
+        <span class="myclass4">No machine can do the work of one extraordinary man.</span>
+      </p>
+
+      <style>
+         p > span { color: red; }
+         #header span { color: pink; }
+         span { color: green; }
+         #header *:last-child { color: orange; }
+         #header span:first-child:hover { color: blue; }
+      </style>
+    </div>
+
+    <p>My answer:</p>
+
+    <table class="answers">
+      <tr>
+        <th></th>
+        <th>color</th>
+        <th>color when mouse over</th>
+      </tr>
+      <tr>
+        <th>span.myclass1</th>
+        <td>pink</td>
+        <td>blue</td>
+      </tr>
+      <tr>
+        <th>span.myclass2</th>
+        <td>pink</td>
+        <td>pink</td>
+      </tr>
+      <tr>
+        <th>span.myclass3</th>
+        <td>orange</td>
+        <td>orange</td>
+      </tr>
+      <tr>
+        <th>span.myclass4</th>
+        <td>red</td>
+        <td>red</td>
+      </tr>
+    </table>
+
+    <h3>Why</h3>
+    <ul class="why">
+      <li><strong>myclass1</strong>: <code>#header span</code> (one ID + one element) is stronger than <code>span</code>, so it is pink. On hover, <code>#header span:first-child:hover</code> (one ID + two pseudo-classes + one element) is the strongest rule, so it turns blue.</li>
+      <li><strong>myclass2</strong>: only <code>#header span</code> and <code>span</code> match, so it is pink. No hover rule matches it.</li>
+      <li><strong>myclass3</strong>: it is the last child of <code>#header</code>. <code>#header *:last-child</code> (one ID + one pseudo-class) beats <code>#header span</code> (one ID + one element), so it is orange.</li>
+      <li><strong>myclass4</strong>: it is not inside <code>#header</code>. <code>p &gt; span</code> (two elements) beats <code>span</code> (one element), so it is red.</li>
+    </ul>
+
+    <hr>
+    <p><a href="../">Back to all labs</a></p>
+  </body>
+</html>

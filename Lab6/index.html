@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPIT-405 lab 6</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Lab 6</h1>
+      <h2>Like or dislike</h2>
+
+      <div class="votes">
+        <button id="like-btn" class="vote" type="button" aria-label="Like">
+          <span aria-hidden="true">&#128077;</span><span id="like-count">0</span>
+        </button>
+        <button id="dislike-btn" class="vote" type="button" aria-label="Dislike">
+          <span aria-hidden="true">&#128078;</span><span id="dislike-count">0</span>
+        </button>
+      </div>
+      <p id="vote-message" class="message" aria-live="polite"></p>
+
+      <h3>Comments</h3>
+      <textarea id="comment-input" rows="5" placeholder="Write a comment..."></textarea>
+      <div class="actions">
+        <button id="submit-btn" class="action" type="button">Submit</button>
+        <button id="reset-btn" class="action" type="button">Clear</button>
+      </div>
+      <p id="comment-message" class="message" aria-live="polite"></p>
+
+      <ul id="comments-list"></ul>
+
+      <p class="back"><a href="../">Back to all labs</a></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

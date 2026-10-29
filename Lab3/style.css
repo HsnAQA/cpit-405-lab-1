@@ -1,0 +1,44 @@
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* Task 1: descendant selector, the img inside .image-preview */
+.image-preview img {
+  width: 200px;
+  border-style: solid;
+  border-width: 30px;
+  border-top-color: skyblue;
+  border-right-color: lightpink;
+  border-bottom-color: lightgreen;
+  border-left-color: #ffefd5;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.demo {
+  border: 1px dashed #999;
+  padding: 12px;
+}
+
+.answers {
+  border-collapse: collapse;
+}
+
+.answers th,
+.answers td {
+  border: 1px solid #333;
+  padding: 8px 14px;
+  text-align: left;
+}
+
+.why li {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#team-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.table-filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-mode table {
+    border-color: #555;
+}
+
+.dark-mode th,
+.dark-mode td {
+    border-color: #555;
+}
+
+/* ---------- Lab 5 additions ---------- */
+
+h1 {
+    margin-right: 16px;
+}
+
+#search,
+#team-filter {
+    max-width: 100%;
+}
+
+th.asc::after {
+    content: " \25B2";
+}
+
+th.desc::after {
+    content: " \25BC";
+}
+
+td {
+    position: relative;
+}
+
+.points-bar {
+    display: block;
+    height: 4px;
+    margin-top: 4px;
+    background-color: #1d70b8;
+    border-radius: 2px;
+}
+
+tr.highlight {
+    background-color: #e3eef8;
+}
+
+.dark-mode tr.highlight {
+    background-color: #444;
+}
+
+.dark-mode #search,
+.dark-mode #team-filter,
+.dark-mode button {
+    background-color: #444;
+    color: #f4f4f4;
+    border-color: #666;
+}
+
+.dark-mode a {
+    color: #9cc9ff;
+}
+
+#summary {
+    color: #666;
+}
+
+.dark-mode #summary {
+    color: #bbb;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: auto;
+        padding: 12px;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .table-filters {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #search {
+        margin-right: 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
