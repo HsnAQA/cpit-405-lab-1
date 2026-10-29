@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPIT-405 lab 4</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Great Auto Parts - Order Form</h1>
+
+    <form action="#" method="post">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+      <label for="make">Make:</label>
+      <input type="text" id="make" name="make" placeholder="Make">
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" placeholder="Model">
+
+      <label for="year">Year:</label>
+      <input type="number" id="year" name="year" placeholder="Year" min="1950" max="2027">
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date">
+
+      <label for="part">Spare Part:</label>
+      <input type="text" id="part" name="part" placeholder="Enter the spare part you need" required>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" placeholder="Enter the quantity of the spare part you need" min="1">
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" rows="10" placeholder="Enter your comment"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <p class="back"><a href="../">Back to all labs</a></p>
+  </body>
+</html>

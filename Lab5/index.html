@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPIT-405 lab 5: NBA Stats</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>NBA Player Stats Dashboard</h1>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </header>
+
+        <search class="table-filters">
+            <input type="text" id="search" placeholder="Search players...">
+            <select id="team-filter">
+                <option value="all">All</option>
+                <!-- Teams will be populated in JS -->
+            </select>
+        </search>
+
+        <table id="player-stats">
+            <thead>
+                <tr>
+                    <th data-key="name">Name</th>
+                    <th data-key="team">Team</th>
+                    <th data-key="points">Points</th>
+                    <th data-key="rebounds">Rebounds</th>
+                    <th data-key="assists">Assists</th>
+                </tr>
+            </thead>
+            <tbody id="player-rows">
+                <!-- Rows will be populated in JS -->
+            </tbody>
+        </table>
+        <p id="summary"></p>
+
+        <p><a href="../">Back to all labs</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
